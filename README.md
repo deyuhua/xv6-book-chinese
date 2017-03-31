@@ -43,15 +43,16 @@ cd ~ && git clone --recursive https://github.com/deyuhua/xv6-book.git
 
 # download source code list in build/pkg.txt
 cd ~/xv6-book/build && ./download.sh # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该
+
+# cross compile
+make
+echo export PATH=~/xv6-book/build/local/bin:$PATH >> .bashrc
+
 ```
 
 ### 编译启动内核
 
 ```bash
-# cross compile
-make
-echo export PATH=~/xv6-book/build/local/bin:$PATH >> .bashrc
-
 # compile xv6
 cd ~/xv6-book/xv6-public && make
 
