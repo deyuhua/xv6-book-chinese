@@ -32,7 +32,7 @@ Unix系统的相关资料：
 2. [VirtualBox虚拟机软件下载](https://www.virtualbox.org/wiki/Downloads)
 
 
-### 交叉编译、启动模拟器(TODO:该步骤需要验证)
+### 交叉编译工具链
 
 ```bash
 # install basic package for ubntu
@@ -43,7 +43,11 @@ cd ~ && git clone --recursive https://github.com/deyuhua/xv6-book.git
 
 # download source code list in build/pkg.txt
 cd ~/xv6-book/build && ./download.sh # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该
+```
 
+### 编译启动内核
+
+```bash
 # cross compile
 make
 echo export PATH=~/xv6-book/build/local/bin:$PATH >> .bashrc
@@ -56,10 +60,14 @@ make qemu # (with xwindow, or start without xwindow: make qemu-nox)
 
 ```
 
-## 本Repo包含的主要资料
-1. Xv6-book中文版(TODO)；
-2. Xv6源码中文解析(TODO)；
-3. Xv6的运行环境配置和脚本;
+## 代码阅读顺序
+
+待更新
+
+
+## xv6-book翻译计划
+
+待更新
 
 
 <meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
