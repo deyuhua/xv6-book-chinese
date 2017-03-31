@@ -22,17 +22,44 @@ Unix系统的相关资料：
    - [Unix v6源码主页](http://v6.cuzuco.com/)
 4. [Xv6的最新课程计划](https://pdos.csail.mit.edu/6.828/2016/schedule.html)
 
-## 本Repo包含的主要资料
-1. Xv6源码中文解析(TODO)；
-2. Xv6-book中文版(TODO)；
-3. Xv6的运行环境配置和脚本;
 
 ## 安装与编译
 本文档中Xv6主要是在Ubuntu的虚拟机环境中编译、调试，VMWare或者VirtualBox(免费)都是是不错的选择，在MacOS下可以使用VMWare Fusion；
 
-环境安装资源下载：
+### 环境安装资源下载：
 
 1. [Ubuntu系统镜像](https://www.ubuntu.com/download)
 2. [VirtualBox虚拟机软件下载](https://www.virtualbox.org/wiki/Downloads)
+
+
+### 交叉编译、启动模拟器(TODO:该步骤需要验证)
+
+```bash
+# install basic package for ubntu
+sudo apt-get install git gcc make qemu wget
+
+# clone this repo
+cd ~ && git clone --recursive https://github.com/deyuhua/xv6-book.git
+
+# download source code list in build/pkg.txt
+cd ~/xv6-book/build && ./download.sh # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该
+
+# cross compile
+make
+echo export PATH=~/xv6-book/build/local/bin:$PATH >> .bashrc
+
+# compile xv6
+cd ~/xv6-book/xv6-public && make
+
+# start qemu simulator
+make qemu # (with xwindow, or start without xwindow: make qemu-nox)
+
+```
+
+## 本Repo包含的主要资料
+1. Xv6-book中文版(TODO)；
+2. Xv6源码中文解析(TODO)；
+3. Xv6的运行环境配置和脚本;
+
 
 <meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
