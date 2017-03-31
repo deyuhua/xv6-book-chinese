@@ -1,3 +1,4 @@
+<meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
 # Xv6操作系统源代码分析
 Xv6是由麻省理工学院(MIT)为[操作系统工程](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/index.htm)的课程开发的以教学目的的操作系统。Xv6是在x86处理器上(x即指x86)用ANSI标准C重新实现的Unix第六版(Unix V6，通常直接被称为V6)。
 
