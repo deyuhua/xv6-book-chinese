@@ -1,9 +1,8 @@
 <!--
-  Title: Awesome Regex
-  Description: A curated list of amazingly awesome regex resources.
-  Author: aloisdg
+  Title: Xv6 book
+  Description: 现代X86版本的unix v6的教学操作系统
+  Author: deyuhua@gmail.com
   -->
-<meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
 
 # Xv6操作系统源代码分析
 Xv6是由麻省理工学院(MIT)为[操作系统工程](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/index.htm)的课程开发的以教学目的的操作系统。Xv6是在x86处理器上(x即指x86)用ANSI标准C重新实现的Unix第六版(Unix V6，通常直接被称为V6)。
@@ -29,3 +28,5 @@ Unix系统的相关资料：
 
 ## 安装与编译
 本文档中Xv6主要是在Ubuntu的虚拟机环境中编译、调试，VMWare或者VirtualBox(免费)都是是不错的选择，在Max下可以使用VMWare Fusion；
+
+<meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
