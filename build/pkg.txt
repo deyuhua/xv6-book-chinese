@@ -1,6 +1,6 @@
 ftp://ftp.gmplib.org/pub/gmp-5.0.2/gmp-5.0.2.tar.bz2
 http://mpfr.loria.fr/mpfr-current/mpfr-3.1.5.tar.gz
-http://www.multiprecision.org/mpC/download/mpc-0.9.tar.gz
+http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz
 http://ftpmirror.gnu.org/binutils/binutils-2.21.1.tar.bz2
-http://ftpmirror.gnu.org/gcc/gcc-4.6.1/gcc-core-4.6.1.tar.bz2
+http://reflection.oss.ou.edu/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2
 http://ftpmirror.gnu.org/gdb/gdb-7.3.1.tar.bz2
