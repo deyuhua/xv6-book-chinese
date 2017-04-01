@@ -21,6 +21,9 @@ Unix系统的相关资料：
    - [莱昂氏源码注解](http://www.lemis.com/grog/Documentation/Lions/)
    - [Unix v6源码主页](http://v6.cuzuco.com/)
 4. [Xv6的最新课程计划](https://pdos.csail.mit.edu/6.828/2016/schedule.html)
+5. **Xv6书籍和源码PDF版本**
+   - [Xv6-book](./book/en/book-rev9.pdf)
+   - [Xv6源码PDF版本](./book/en/xv6-rev9.pdf)
 
 
 ## 安装与编译
@@ -42,7 +45,7 @@ sudo apt-get install git gcc make qemu wget
 cd ~ && git clone --recursive https://github.com/deyuhua/xv6-book.git
 
 # download source code list in build/pkg.txt
-cd ~/xv6-book/build && ./download.sh # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该
+cd ~/xv6-book/build && ./download.sh # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该目录
 
 # cross compile
 make
@@ -68,7 +71,15 @@ make qemu # (with xwindow, or start without xwindow: make qemu-nox)
 
 ## xv6-book翻译计划
 
-待更新
+1. 第一章：操作系统接口(Operating system interfaces)[4.3更新]
+2. 第二章：操作系统结构(Operating system orgnization)[4.10更新]
+3. 第三章：分页表(Page tables)[4.17更新]
+4. 第四章：陷阱、中断与驱动(Traps, interrupts, and driver)[4.24更新]
+5. 第五章：锁(Locking)[5.1更新]
+6. 第六章：调度(Scheduling)[5.8更新]
+7. 第七章：总结(Summary)[5.15更新]
+8. 附录A: PC硬件(PC hardware)[5.15更新]
+9. 附录B：引导程序(the boot loader)[5.22更新]
 
 
 <meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
