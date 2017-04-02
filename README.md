@@ -7,8 +7,12 @@
 # Xv6操作系统
 Xv6是由麻省理工学院(MIT)为[操作系统工程](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/index.htm)的课程开发的以教学目的的操作系统。Xv6是在x86处理器上(x即指x86)用ANSI标准C重新实现的Unix第六版(Unix V6，通常直接被称为V6)。
 
-## Xv6与莱昂氏unix源码剖析的异同
-莱昂氏unix源码分析是对unix v6版本的源码做注解，以便学生能够很好的了解操作系统的运行原理；unix系统最早由KenThompson、Dennis Ritchie和Douglas McIlroy在贝尔实验室开发的，现在OpenBDS， FreeBSD，、MacOS和Linux都是类unix系统；但是unix v6的源码是运行PDP-11机器上，与现在主流使用的x86架构不同，因此Xv6提供更好的学习内核的机会，并在v6的基础上对多核的支持；
+## Xv6的灵感来源
+Unix系统最早由KenThompson、Dennis Ritchie和Douglas McIlroy在贝尔实验室开发的操作系统，而现代广泛使用的Linux、Mac OS X、OpenBDS和FreeBSD都是类unix系统；但是unix v6在数字设备公司(DEC)的PDP-11机器上运行，与现在使用的x86架构不同。
+
+莱昂氏unix源代码分析由上下两篇组成，上篇为Unix v6源代码，下篇是莱昂先生对Unix操作系统源代码的详细分析。该书简洁、透彻，曾作为未公开出版物广泛流传了二十多年（主要是许可问题，但是只允许作为大学课程使用），是一部杰出的经典之作，为操作系统hacker了解系统运行原理提供了非常好的途径。莱昂氏源码分析也是xv6的灵感来源，书籍形式和莱昂氏unix源码分析完全相同，但是xv6是在X86机器上的现代实现，并添加了多核支持，因此非常适合学习操作系统的基本原理；
+
+我翻译这本书籍，主要是想把这本现代版本的莱昂氏源码分析介绍给更多有爱好者，共同提高和进步，翻译难免会有不准确或者错误之处，希望大家能够提issue或者fork，让我们共同完善和丰富操作系统的资料。
 
 Unix系统的相关资料：
 
@@ -27,13 +31,12 @@ Unix系统的相关资料：
 
 
 ## 安装与编译
-本文档中Xv6主要是在Ubuntu的虚拟机环境中编译、调试，VMWare或者VirtualBox(免费)都是是不错的选择，在MacOS下可以使用VMWare Fusion；
+本文档中Xv6主要是在Ubuntu的虚拟机环境中编译、调试，VMWare或者VirtualBox(免费)都是是不错的选择，在MacOS下可以使用VMWare Fusion。
 
 ### 环境安装资源下载：
 
-1. [Ubuntu系统镜像](https://www.ubuntu.com/download)
-2. [VirtualBox虚拟机软件下载](https://www.virtualbox.org/wiki/Downloads)
-
+1. [Ubuntu系统镜像下载](https://www.ubuntu.com/download)
+2. [VirtualBox虚拟机下载](https://www.virtualbox.org/wiki/Downloads)
 
 ### 交叉编译工具链
 
@@ -44,16 +47,16 @@ sudo apt-get install git gcc make qemu wget m4
 # clone this repo
 cd ~ && git clone --recursive https://github.com/deyuhua/xv6-book.git
 
-# download source code list in build/pkg.txt
-cd ~/xv6-book/build && wget -i pkg.txt # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该目录
+# 下载速度偏慢，最好使用代理
+cd ~/xv6-book/build && wget -i pkg.txt 
 
-# cross compile
+# 交叉编译
 ./install.sh
 echo export PATH=~/xv6-book/build/local/bin:$PATH >> ~/.bashrc
 echo export LD_LIBRARY_PATH=~/xv6-book/build/local/lib >> ~/.bashrc
 
-source ~/.bashrc
-sudo ldconfig
+# 这步非常重要，主要是设置环境变量
+source ~/.bashrc && sudo ldconfig
 ```
 
 ### 编译启动内核
@@ -74,7 +77,7 @@ make qemu # (with xwindow, or start without xwindow: make qemu-nox)
 
 ## xv6-book翻译计划
 
-1. 第一章：操作系统接口(Operating system interfaces)[4.3更新]
+1. 第一章：[操作系统接口(Operating system interfaces)](https://github.com/deyuhua/xv6-book/blob/master/book/zh/chap01.md)[待校订]
 2. 第二章：操作系统结构(Operating system orgnization)[4.10更新]
 3. 第三章：分页表(Page tables)[4.17更新]
 4. 第四章：陷阱、中断与驱动(Traps, interrupts, and driver)[4.24更新]
