@@ -4,10 +4,10 @@
   Author: deyuhua@gmail.com
   -->
 
-# Xv6操作系统源代码分析
+# Xv6操作系统
 Xv6是由麻省理工学院(MIT)为[操作系统工程](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012/index.htm)的课程开发的以教学目的的操作系统。Xv6是在x86处理器上(x即指x86)用ANSI标准C重新实现的Unix第六版(Unix V6，通常直接被称为V6)。
 
-## Xv6与莱昂氏unix源码分析的异同
+## Xv6与莱昂氏unix源码剖析的异同
 莱昂氏unix源码分析是对unix v6版本的源码做注解，以便学生能够很好的了解操作系统的运行原理；unix系统最早由KenThompson、Dennis Ritchie和Douglas McIlroy在贝尔实验室开发的，现在OpenBDS， FreeBSD，、MacOS和Linux都是类unix系统；但是unix v6的源码是运行PDP-11机器上，与现在主流使用的x86架构不同，因此Xv6提供更好的学习内核的机会，并在v6的基础上对多核的支持；
 
 Unix系统的相关资料：
@@ -39,18 +39,21 @@ Unix系统的相关资料：
 
 ```bash
 # install basic package for ubntu
-sudo apt-get install git gcc make qemu wget
+sudo apt-get install git gcc make qemu wget m4
 
 # clone this repo
 cd ~ && git clone --recursive https://github.com/deyuhua/xv6-book.git
 
 # download source code list in build/pkg.txt
-cd ~/xv6-book/build && ./download.sh # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该目录
+cd ~/xv6-book/build && wget -i pkg.txt # 最好使用代理，速度非常的慢, 如果不能自动下载，使用浏览器下载好放置到该目录
 
 # cross compile
-make
-echo export PATH=~/xv6-book/build/local/bin:$PATH >> .bashrc
+./install.sh
+echo export PATH=~/xv6-book/build/local/bin:$PATH >> ~/.bashrc
+echo export LD_LIBRARY_PATH=~/xv6-book/build/local/lib >> ~/.bashrc
 
+source ~/.bashrc
+sudo ldconfig
 ```
 
 ### 编译启动内核
