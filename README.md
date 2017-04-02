@@ -61,7 +61,7 @@ make qemu # (with xwindow, or start without xwindow: make qemu-nox)
 
 ## Xv6书籍翻译计划
 
-1. 第一章：[操作系统接口(Operating system interfaces)](https://github.com/deyuhua/xv6-book/blob/master/book/zh/chap01.md)[待校订]
+1. 第一章：[操作系统接口(Operating system interfaces)](https://github.com/deyuhua/xv6-book/blob/master/book/zh/chap01.md)
 2. 第二章：操作系统结构(Operating system orgnization)[4.10更新]
 3. 第三章：分页表(Page tables)[4.17更新]
 4. 第四章：陷阱、中断与驱动(Traps, interrupts, and driver)[4.24更新]
