@@ -1,1 +1,0 @@
-wget -i pkg.txt
