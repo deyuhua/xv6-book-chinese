@@ -14,6 +14,34 @@ Unix系统最早由KenThompson、Dennis Ritchie和Douglas McIlroy在贝尔实验
 
 我翻译这本书籍，主要是想把这本现代版本的莱昂氏源码分析介绍给更多有爱好者，共同提高和进步，翻译难免会有不准确或者错误之处，希望大家能够提issue或者fork，让我们共同完善和丰富操作系统的资料。
 
+## Xv6书籍翻译计划
+
+1. 第一章：[操作系统接口(Operating system interfaces)](https://github.com/deyuhua/xv6-book/blob/master/book/zh/chap01.md)
+2. 第二章：操作系统结构(Operating system orgnization)[4.10更新]
+3. 第三章：分页表(Page tables)[4.17更新]
+4. 第四章：陷阱、中断与驱动(Traps, interrupts, and driver)[4.24更新]
+5. 第五章：锁(Locking)[5.1更新]
+6. 第六章：调度(Scheduling)[5.8更新]
+7. 第七章：总结(Summary)[5.15更新]
+8. 附录A: PC硬件(PC hardware)[5.15更新]
+9. 附录B：引导程序(the boot loader)[5.22更新]
+
+## 操作系统的相关资料：
+
+1. [Unix家族的维基百科资料](https://zh.wikipedia.org/wiki/UNIX；)
+2. Linux内核学习的书籍和资料：
+   - [《Linux内核设计与实现》](https://book.douban.com/subject/5503292/);
+   - [《深入理解Linux内核》](https://book.douban.com/subject/1767120/);
+   - [《Linux设备驱动程序》](https://book.douban.com/subject/1420480/);
+3. 莱昂氏源码分析的资料：
+   - [莱昂氏源码注解](http://www.lemis.com/grog/Documentation/Lions/)
+   - [Unix v6源码主页](http://v6.cuzuco.com/)
+4. **Xv6书籍和源码PDF版本**
+   - [Xv6-book](./book/en/book-rev9.pdf)
+   - [Xv6源码PDF版本](./book/en/xv6-rev9.pdf)
+5. [MIT操作系统工程最新课程计划](https://pdos.csail.mit.edu/6.828/2016/schedule.html)
+
+
 ## 安装与编译
 本文档中Xv6主要是在Ubuntu的虚拟机环境中编译、调试，VMWare或者VirtualBox(免费)都是是不错的选择，在MacOS下可以使用VMWare Fusion。
 
@@ -58,33 +86,6 @@ make qemu # (with xwindow, or start without xwindow: make qemu-nox)
 
 待更新
 
-
-## Xv6书籍翻译计划
-
-1. 第一章：[操作系统接口(Operating system interfaces)](https://github.com/deyuhua/xv6-book/blob/master/book/zh/chap01.md)
-2. 第二章：操作系统结构(Operating system orgnization)[4.10更新]
-3. 第三章：分页表(Page tables)[4.17更新]
-4. 第四章：陷阱、中断与驱动(Traps, interrupts, and driver)[4.24更新]
-5. 第五章：锁(Locking)[5.1更新]
-6. 第六章：调度(Scheduling)[5.8更新]
-7. 第七章：总结(Summary)[5.15更新]
-8. 附录A: PC硬件(PC hardware)[5.15更新]
-9. 附录B：引导程序(the boot loader)[5.22更新]
-
-## 操作系统的相关资料：
-
-1. [Unix家族的维基百科资料](https://zh.wikipedia.org/wiki/UNIX；)
-2. Linux内核学习的书籍和资料：
-   - [《Linux内核设计与实现》](https://book.douban.com/subject/5503292/);
-   - [《深入理解Linux内核》](https://book.douban.com/subject/1767120/);
-   - [《Linux设备驱动程序》](https://book.douban.com/subject/1420480/);
-3. 莱昂氏源码分析的资料：
-   - [莱昂氏源码注解](http://www.lemis.com/grog/Documentation/Lions/)
-   - [Unix v6源码主页](http://v6.cuzuco.com/)
-4. **Xv6书籍和源码PDF版本**
-   - [Xv6-book](./book/en/book-rev9.pdf)
-   - [Xv6源码PDF版本](./book/en/xv6-rev9.pdf)
-5. [MIT操作系统工程最新课程计划](https://pdos.csail.mit.edu/6.828/2016/schedule.html)
 
 
 <meta name='keywords' content='Xv6, mit, operation system, unix v6, qemu'>
