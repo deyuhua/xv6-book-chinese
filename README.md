@@ -17,7 +17,7 @@ Unix系统最早由KenThompson、Dennis Ritchie和Douglas McIlroy在贝尔实验
 ## Xv6书籍翻译计划
 
 1. 第一章：[操作系统接口(Operating system interfaces)](https://github.com/deyuhua/xv6-book/blob/master/book/zh/chap01.md)
-2. 第二章：操作系统结构(Operating system orgnization)[4.10更新]
+2. 第二章：操作系统结构(Operating system orgnization)[部分更新，未校订，工作较忙]
 3. 第三章：分页表(Page tables)[4.17更新]
 4. 第四章：陷阱、中断与驱动(Traps, interrupts, and driver)[4.24更新]
 5. 第五章：锁(Locking)[5.1更新]
